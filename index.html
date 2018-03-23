@@ -1,0 +1,417 @@
+<head>
+
+</head>
+
+<body>
+<div class="mhPage">
+    <div class="mhmaincontainer">
+      <div id="mhwcHeader">
+        <div>
+          MHWCALC v.01 | Monster Hunter: World Build Planner &amp; calculator | by
+          TeamBRG
+        </div>
+      </div>
+      <div id="mhwcComms1" class="mhwcCommBtn">
+        Upcoming Features and Development Log
+      </div>
+      <div id="mhwcComms1msg" class="mhwcCommMsg">
+        <pre class="mhwcPre">
+  <strong>Full development log under construction.</strong>
+  &gt; Will probably be on another page, while basics will be on here.
+  <strong>Faster initial data loading</strong> 
+  &gt; I'm just choosing from different options at this point. It's coming!
+  <strong>Better mobile support</strong> 
+  &gt; Cannot search by text on mobile.
+  <strong>Visual Fixes</strong> 
+  &gt; A lot of little adjustments still needed.
+  <strong>Weapon Data </strong> 
+  &gt; Considering only "tree enders".
+  <strong>Damage Calculation </strong> 
+  &gt; I have to compile all the info about this.
+  <strong>More Local Save Slots</strong> 
+  &gt; I'm thinking 4, that you can rename.
+  <strong>MHW Visual Feel</strong>
+  &gt; Major visual overhaul to make it "look like" MHW.
+  
+  <strong>Feel free to suggest more using the Contact Us tab below!</strong>
+  </pre>
+      </div>
+      <div id="mhwcComms2" class="mhwcCommBtn">
+        Bug reports? Wrong info? Feature requests? Comments?
+        <strong>CONTACT US!</strong>
+      </div>
+      <div id="mhwcComms2msg" class="mhwcCommMsg">
+        <pre class="mhwcPre">
+  <strong>Reddit</strong>
+  &gt; <a href=
+  "https://www.reddit.com/r/TeamBRG/comments/85e9t8/mhwcalc_feedback_thread_1/">MHWCalc reddit thread</a> on TeamBRG subreddit.
+  &gt; Or just our <a href=
+  "https://www.reddit.com/r/TeamBRG/">TeamBRG subreddit</a>.
+  &gt; Message <a href=
+  "https://www.reddit.com/user/BRGPrincess">u/BRGPrincess</a>.
+  <a href=
+  "https://www.facebook.com/TeamBRG"><strong>Facebook</strong></a> &gt; I know right... but we can easily see the messages.
+  <a href=
+  "https://www.youtube.com/teambrg"><strong>YouTube</strong></a> &gt; Comment or message.
+  <a href=
+  "https://www.twitch.tv/teambrg"><strong>Twitch</strong></a> &gt; It's a long shot, but may as well follow us.
+  <strong>Comments</strong> &gt; I think adding comments here would bog it down...
+  </pre>
+      </div>
+      <div class="mhCalculator">
+        <table id="mhSelectWeapon">
+          <tbody>
+            <tr>
+              <th>
+                Weapon
+              </th>
+              <th>
+                Slot1
+              </th>
+              <th>
+                Slot2
+              </th>
+              <th>
+                Slot3
+              </th>
+            </tr>
+            <tr>
+              <td>
+                Select a slot size and skill
+              </td>
+              <td>
+                <div>
+                  <select id="mhWeaponSlot1SizeSelector">
+                    <option value="none">
+                      None
+                    </option>
+                    <option value="small">
+                      Small
+                    </option>
+                    <option value="medium">
+                      Medium
+                    </option>
+                    <option value="big">
+                      Big
+                    </option>
+                  </select>
+                </div><select id="mhWeaponSelectSlot1">
+                  </select>
+              </td>
+              <td>
+                <div>
+                  <select id="mhWeaponSlot2SizeSelector">
+                    <option value="none">
+                      None
+                    </option>
+                    <option value="small">
+                      Small
+                    </option>
+                    <option value="medium">
+                      Medium
+                    </option>
+                    <option value="big">
+                      Big
+                    </option>
+                  </select>
+                </div><select id="mhWeaponSelectSlot2">
+                  </select>
+              </td>
+              <td>
+                <div>
+                  <select id="mhWeaponSlot3SizeSelector">
+                    <option value="none">
+                      None
+                    </option>
+                    <option value="small">
+                      Small
+                    </option>
+                    <option value="medium">
+                      Medium
+                    </option>
+                    <option value="big">
+                      Big
+                    </option>
+                  </select>
+                </div><select id="mhWeaponSelectSlot3">
+                  </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mhCalculator">
+        <table id="mhSelectTable">
+          <tbody>
+            <tr>
+              <th colspan="2">
+                Equipment
+              </th>
+              <th>
+                Skill 1
+              </th>
+              <th>
+                #
+              </th>
+              <th>
+                Skill 2
+              </th>
+              <th>
+                #
+              </th>
+              <th>
+                Slot1
+              </th>
+              <th>
+                Slot2
+              </th>
+              <th>
+                Slot3
+              </th>
+            </tr>
+            <tr id="mhHelmContainer">
+              <td class="EQTypeBox">
+                Helm
+              </td>
+              <td>
+                <select id="mhHelmSelect">
+                  </select>
+              </td>
+              <td id="mhHelmSelectSkill1"></td>
+              <td id="mhHelmSelectSkill1amt"></td>
+              <td id="mhHelmSelectSkill2"></td>
+              <td id="mhHelmSelectSkill2amt"></td>
+              <td>
+                <select id="mhHelmSelectSlot1">
+                  </select>
+                <p id="HClassSL1"></p>
+              </td>
+              <td>
+                <select id="mhHelmSelectSlot2">
+                  </select>
+                <p id="HClassSL2"></p>
+              </td>
+              <td>
+                <select id="mhHelmSelectSlot3">
+                  </select>
+                <p id="HClassSL3"></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Body
+              </td>
+              <td>
+                <select id="mhBodySelect">
+                  </select>
+              </td>
+              <td id="mhBodySelectSkill1"></td>
+              <td id="mhBodySelectSkill1amt"></td>
+              <td id="mhBodySelectSkill2"></td>
+              <td id="mhBodySelectSkill2amt"></td>
+              <td>
+                <select id="mhBodySelectSlot1">
+                  </select>
+              </td>
+              <td>
+                <select id="mhBodySelectSlot2">
+                  </select>
+              </td>
+              <td>
+                <select id="mhBodySelectSlot3">
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Hand
+              </td>
+              <td>
+                <select id="mhHandSelect">
+                  </select>
+              </td>
+              <td id="mhHandSelectSkill1"></td>
+              <td id="mhHandSelectSkill1amt"></td>
+              <td id="mhHandSelectSkill2"></td>
+              <td id="mhHandSelectSkill2amt"></td>
+              <td>
+                <select id="mhHandSelectSlot1">
+                  </select>
+              </td>
+              <td>
+                <select id="mhHandSelectSlot2">
+                  </select>
+              </td>
+              <td>
+                <select id="mhHandSelectSlot3">
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Legs
+              </td>
+              <td>
+                <select id="mhLegsSelect">
+                  </select>
+              </td>
+              <td id="mhLegsSelectSkill1"></td>
+              <td id="mhLegsSelectSkill1amt"></td>
+              <td id="mhLegsSelectSkill2"></td>
+              <td id="mhLegsSelectSkill2amt"></td>
+              <td>
+                <select id="mhLegsSelectSlot1">
+                  </select>
+              </td>
+              <td>
+                <select id="mhLegsSelectSlot2">
+                  </select>
+              </td>
+              <td>
+                <select id="mhLegsSelectSlot3">
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Boots
+              </td>
+              <td>
+                <select id="mhBootsSelect">
+                  </select>
+              </td>
+              <td id="mhBootsSelectSkill1"></td>
+              <td id="mhBootsSelectSkill1amt"></td>
+              <td id="mhBootsSelectSkill2"></td>
+              <td id="mhBootsSelectSkill2amt"></td>
+              <td>
+                <select id="mhBootsSelectSlot1">
+                  </select>
+              </td>
+              <td>
+                <select id="mhBootsSelectSlot2">
+                  </select>
+              </td>
+              <td>
+                <select id="mhBootsSelectSlot3">
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Charm
+              </td>
+              <td>
+                <select id="mhCharmSelect">
+                  </select>
+              </td>
+              <td id="mhCharmSelectSkill1"></td>
+              <td id="mhCharmSelectSkill1amt"></td>
+              <td id="mhCharmSelectSkill2"></td>
+              <td id="mhCharmSelectSkill2amt"></td>
+              <td colspan="3"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="mhwcBottomWrapper">
+        <div id="mhwcsSkillSummaryContainer">
+          <div id="mhOvercap"></div>
+          <table id="mhSkillSummary">
+            <tbody id='mhSkillSummary'>
+              <tr>
+                <th>
+                  Skill Summary
+                </th>
+                <th>
+                  #
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  Nothing Selected
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="mhwcSaveandLoad">
+          <div>
+            <button id="ExportCodeBtn" class="mhwcButtons">Get
+            Shareable Link</button> <button id="ImportCodeBtn" class=
+            "mhwcButtons">Import (Dev test tool)</button>
+          </div>
+          <div>
+            <textarea id="IEStringArea" rows="3" cols="48">
+  Press button to get build URL - share with friends! (Needs testing)
+  </textarea>
+            <div>
+              Permanently Save to Local Storage
+            </div>
+            <div>
+              <button id="SaveLocalBtn" class="mhwcButtons">Save to
+              Local</button> <button id="LoadLocalBtn" class=
+              "mhwcButtons">Load from Local</button> <button id=
+              "ClearLocalBtn" class="mhwcButtons">Clear Save</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <select class="HiderSon" id="SmallDecoList">
+            </select> <select class="HiderSon" id="MediumDecoList">
+            </select> <select class="HiderSon" id="BigDecoList">
+            </select>
+        </div>
+      </div>
+    </div>
+    <div class="mhRightSidebar">
+        <p>
+            MHWCALC Copyright © 2018 TeamBRG.com
+        </p>
+          <p>
+          (At least until we fix up our Git!)
+        </p>
+      <div id="mhrsbad1">
+        <p>
+          Adverstisement
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- MHWC_Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4374192272924094"
+       data-ad-slot="1756586729"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+        </p>
+        <p>
+          Adverstisement
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- MHWC_Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4374192272924094"
+       data-ad-slot="1756586729"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="bottomads" align="center">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- MHWC_Responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4374192272924094"
+       data-ad-slot="1756586729"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  </div>
+</body>
