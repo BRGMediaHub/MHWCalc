@@ -1,14 +1,4 @@
 jQuery(document).ready(function($) {
-    //data
-    //https://docs.google.com/spreadsheets/d/1xBBqcMfvVD7tA7uhBlod1saO-l8M46bAOLdv5XRhmwc/edit#gid=0
-    //https://github.com/TeamBRG/MHWCalc/blob/master/mhData.json
-  
-    //get the master dataset
-    //var mhData = $.getJSON({'url': "https://api.myjson.com/bins/17i6p9", 'async': false});
-    //var mhData = $.get("https://rawgit.com/TeamBRG/MHWCalc/master/mhData.json"); how do we host giles on github for dev purposes? in case we need to make changes to the JSON
-    //mhData = JSON.parse(mhData.responseText);
-  
-    //get Skills data
     var mhSkills = $.getJSON({
       'url': "https://spreadsheets.google.com/feeds/list/1xBBqcMfvVD7tA7uhBlod1saO-l8M46bAOLdv5XRhmwc/2/public/values?alt=json",
       'async': false
