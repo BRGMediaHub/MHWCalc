@@ -367,8 +367,8 @@ jQuery(document).ready(function($) {
         $("#" + mhS1Amt).text(mhObj.feed.entry[i].gsx$mhskill1amt.$t);
         $("#" + mhS2).text(mhObj.feed.entry[i].gsx$mhskill2.$t);
         $("#" + mhS2Amt).text(mhObj.feed.entry[i].gsx$mhskill2amt.$t);
-        CompileSkills();
       }
+      CompileSkills();
     }
   
     //When user selects equipment, populate skills and slots on the same row
@@ -944,7 +944,10 @@ jQuery(document).ready(function($) {
       var z = ConvertNullNoneUndef($("#mhWeaponSelectSlot2").val());
       var a1 = ConvertNullNoneUndef($("#mhWeaponSelectSlot3").val());
   
-      $("#IEStringArea").val(window.location.href + "?mhwclfurl=" + a + "j" + b + "j" + c + "j" + d + "j" + e + "j" + f + "j" + g + "j" + h + "j" + i + "j" + j + "j" + k + "j" + l + "j" + m + "j" + n + "j" + o + "j" + p + "j" + q + "j" + r + "j" + s + "j" + t + "j" + u + "j" + v + "j" + w + "j" + x + "j" + y + "j" + z + "j" + a1 + "j");
+     //Removes possible "double stack" from already loaded URL
+      var mhwcTempUrl  = [location.protocol, '//', location.host, location.pathname].join('');
+
+      $("#IEStringArea").val(mhwcTempUrl + "?mhwclfurl=" + a + "j" + b + "j" + c + "j" + d + "j" + e + "j" + f + "j" + g + "j" + h + "j" + i + "j" + j + "j" + k + "j" + l + "j" + m + "j" + n + "j" + o + "j" + p + "j" + q + "j" + r + "j" + s + "j" + t + "j" + u + "j" + v + "j" + w + "j" + x + "j" + y + "j" + z + "j" + a1 + "j");
   
   
     });
@@ -996,7 +999,7 @@ jQuery(document).ready(function($) {
   
       var StringLoadArr = ObtainTrueLoadString(loadSource);
       StringLoadArr = NormalizeArray(StringLoadArr);
-      alert("Loading Build: " + StringLoadArr);
+      alert("Loading Build");
   
       //load helm  equipment slot
       if (StringLoadArr[0] === "n") {
@@ -1206,3 +1209,20 @@ jQuery(document).ready(function($) {
     console.log("Finished Loading Calc");
   });
   
+  //Unqeuip Button//
+  $(".mhwcUnequip").click(function() {
+    var tempUnequip = $(this).attr('id');
+    var finalUnequip = "";
+    switch (tempUnequip){
+      case "UnequipHelm":{ finalUnequip = "mhHelmSelect"; }break;
+      case "UnequipBody":{ finalUnequip = "mhBodySelect"; }break;
+      case "UnequipHand":{ finalUnequip = "mhHandSelect"; }break;
+      case "UnequipLegs":{ finalUnequip = "mhLegsSelect"; }break;
+      case "UnequipBoots":{ finalUnequip = "mhBootsSelect"; }break;
+      case "UnequipCharm":{ finalUnequip = "mhCharmSelect"; }break;
+    }
+    $("#" + finalUnequip)
+    .val([])
+    .trigger('change').trigger('chosen:updated');
+    
+  });
