@@ -89,8 +89,6 @@ jQuery(document).ready(function($) {
         "</option>");
     }
   
-  
-  
     //initialise slot dropdowns
     var mhSmallDecoData = $.getJSON({
       'url': "https://spreadsheets.google.com/feeds/list/1xBBqcMfvVD7tA7uhBlod1saO-l8M46bAOLdv5XRhmwc/8/public/values?alt=json",
@@ -1200,15 +1198,6 @@ jQuery(document).ready(function($) {
       mhwcLOADER($("#IEStringArea").val());
     });
   
-    /*
-    //experimental chosen css changer = success
-    $('.chosen-drop').css({
-      "width": "auto",
-      "white-space": "nowrap"
-    });*/
-    console.log("Finished Loading Calc");
-  });
-  
   //Unqeuip Button//
   $(".mhwcUnequip").click(function() {
     var tempUnequip = $(this).attr('id');
@@ -1225,4 +1214,30 @@ jQuery(document).ready(function($) {
     .val([])
     .trigger('change').trigger('chosen:updated');
     
+  });
+
+  //checks IF there was a loaded build, else make it blank.
+  if (window.location.search.indexOf('?mhwclfurl=') > -1) {
+  
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      }
+      return (false);
+
+    }
+  } else {
+    //make everything blank if not loaded via URL param
+    $("#mhHelmSelect, #mhBodySelect, #mhHandSelect, #mhLegsSelect, #mhBootsSelect, #mhCharmSelect")
+    .val([])
+    .trigger('change').trigger('chosen:updated');
+
+  }
+
+    console.log("Finished Loading Calc");
   });
